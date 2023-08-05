@@ -7,6 +7,7 @@ import {
 } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
+
 const defaultFormFields = {
   displayName: "",
   email: "",
@@ -34,6 +35,7 @@ const SignUpForm = () => {
         email,
         password
       );
+
       await createUserDocumentsFromAuth(user, { displayName });
       resetFormFields();
     } catch (error) {
